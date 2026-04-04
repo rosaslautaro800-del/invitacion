@@ -29,12 +29,15 @@
     h1 { font-size: 30px; }
     p { font-size: 18px; }
 
+    /* 💗 TARJETAS ROSA PASTEL */
     .card {
-      background: rgba(255,255,255,0.9);
-      color: #ffd6e0;
-      border-radius: 15px;
+      background: #ffe4ec;
+      color: #333;
+      border-radius: 20px;
       padding: 20px;
       margin-top: 20px;
+      box-shadow: 0 8px 25px rgba(255, 182, 193, 0.4);
+      backdrop-filter: blur(5px);
     }
 
     iframe {
@@ -57,13 +60,14 @@
       transition: 0.3s;
     }
 
-    .yes { background: #6b4f4f; color: white; }
-    .yes:hover { background: #4b3832; }
+    /* 💗 BOTONES COMBINADOS */
+    .yes { background: #ff8fab; color: white; }
+    .yes:hover { background: #ff5d8f; }
 
-    .fun { background: #d9ad7c; color: white; }
-    .fun:hover { background: #b08968; }
+    .fun { background: #ffc2d1; color: #333; }
+    .fun:hover { background: #ff99ac; }
 
-    .no { background: #ccc; }
+    .no { background: #ddd; }
 
     footer {
       margin-top: 20px;
@@ -86,7 +90,6 @@
       <h1>Iliana querida, te dejo esto 😊</h1>
       <p>Te espero!</p>
 
-      <!-- 🔊 indicación -->
       <p>🔊 Tocá la pantalla 😉</p>
 
       <div class="card">
@@ -99,7 +102,7 @@
       </div>
 
       <div class="card">
-        <p>Espero que la pases muy bien y hacerte reir mucho!😌</p>
+        <p>Espero que la pases muy bien y hacerte reir mucho! 😌</p>
 
         <button class="btn yes" onclick="aceptar()">Sí 😊</button>
         <button class="btn fun" onclick="obvio()">Obvio 😏</button>
