@@ -9,15 +9,11 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      
-      /* FONDO CON IMAGEN */
       background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') no-repeat center center/cover;
-      
       color: #333;
       text-align: center;
     }
 
-    /* capa oscura arriba del fondo (queda más aesthetic) */
     .overlay {
       background: rgba(0,0,0,0.5);
       min-height: 100vh;
@@ -30,13 +26,8 @@
       color: white;
     }
 
-    h1 {
-      font-size: 30px;
-    }
-
-    p {
-      font-size: 18px;
-    }
+    h1 { font-size: 30px; }
+    p { font-size: 18px; }
 
     .card {
       background: rgba(255,255,255,0.9);
@@ -66,27 +57,13 @@
       transition: 0.3s;
     }
 
-    .yes {
-      background: #6b4f4f;
-      color: white;
-    }
+    .yes { background: #6b4f4f; color: white; }
+    .yes:hover { background: #4b3832; }
 
-    .yes:hover {
-      background: #4b3832;
-    }
+    .fun { background: #d9ad7c; color: white; }
+    .fun:hover { background: #b08968; }
 
-    .fun {
-      background: #d9ad7c;
-      color: white;
-    }
-
-    .fun:hover {
-      background: #b08968;
-    }
-
-    .no {
-      background: #ccc;
-    }
+    .no { background: #ccc; }
 
     footer {
       margin-top: 20px;
@@ -98,11 +75,19 @@
 
 <body>
 
+  <!-- 🎵 MÚSICA -->
+  <audio id="musica" loop>
+    <source src="lana.mp3" type="audio/mpeg">
+  </audio>
+
   <div class="overlay">
     <div class="container">
       
       <h1>Iliana querida, te dejo esto 😊</h1>
       <p>Te espero!</p>
+
+      <!-- 🔊 indicación -->
+      <p>🔊 Tocá la pantalla 😉</p>
 
       <div class="card">
         <h2>☕ Te dejo todo listo para vernos!</h2>
@@ -110,7 +95,7 @@
         <p>🕒 Hora: 18:30</p>
         <p>📍 Lugar: Sublime cafe</p>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27204.66625789626!2d-68.5597515!3d-31.5356034!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9681410073b2a5a5%3A0x5a3d5eb28883a34b!2sSublime%20caf%C3%A9!5e0!3m2!1ses-419!2sar!4v1775279328911!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27204.66625789626!2d-68.5597515!3d-31.5356034!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9681410073b2a5a5%3A0x5a3d5eb28883a34b!2sSublime%20caf%C3%A9!5e0!3m2!1ses-419!2sar!4v1775279328911!5m2!1ses-419!2sar"></iframe>
       </div>
 
       <div class="card">
@@ -129,12 +114,18 @@
   </div>
 
   <script>
+    // 🎵 reproducir música al primer toque
+    document.addEventListener("click", function () {
+      const audio = document.getElementById("musica");
+      audio.play();
+    }, { once: true });
+
     function aceptar() {
-      window.location.href = "https://wa.me/5492645782637?text=Holaa%20😊%20Lautaro%20%20soy iliana%20%20%20";
+      window.location.href = "https://www.instagram.com/lautirosass/";
     }
 
     function obvio() {
-      window.location.href = "https://wa.me/5492645782637?text=Holaa%20😊%20Lautaro%20%20soy iliana%20%20%20";
+      window.location.href = "https://www.instagram.com/lautirosass/";
     }
 
     function rechazar() {
